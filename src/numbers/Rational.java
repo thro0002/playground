@@ -177,5 +177,9 @@ public class Rational extends Zahl {
 		print();
 
 	}
+	
+	public void sinnlos() {
+		System.out.println("Hat ja keinen Sinn...");
+	}
 
 }
