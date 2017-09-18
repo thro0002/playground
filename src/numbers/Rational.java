@@ -1,5 +1,8 @@
 package numbers;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Rationale Zahlen.
  * 
@@ -15,11 +18,15 @@ public class Rational extends Zahl {
 
 	private int p;
 	private int q;
+	private static final Logger log = LogManager.getLogger();
 
 	/**
 	 * Rationale Zahl mit Wert 1 für Zähler und Nenner.
 	 */
 	public Rational() {
+		if(log.isTraceEnabled()) {
+			log.trace("** Rational()");
+		}
 		this.p = 1;
 		this.q = 1;
 	}
@@ -31,6 +38,9 @@ public class Rational extends Zahl {
 	 * \param[in] z Wert für Zähler
 	 */
 	public Rational(int z) {
+		if(log.isTraceEnabled()) {
+			log.trace("** Rational(int) value:" + z);
+		}
 		this.p = z;
 		this.q = 1;
 	}
@@ -42,6 +52,9 @@ public class Rational extends Zahl {
 	 * \param[in] n Wert für Nenner
 	 */
 	public Rational(int z, int n) {
+		if(log.isTraceEnabled()) {
+			log.trace("** Rational(int, int) values:"+ z + " " + n);
+		}
 		this.p = z;
 		this.q = n;
 		assert (n != 0);
@@ -52,7 +65,13 @@ public class Rational extends Zahl {
 	 * Methode zur Ausgabe des Bruchs.
 	 */
 	public void print() {
+		if(log.isTraceEnabled()) {
+			log.info(">> print()");
+		}
 		System.out.println(p + "/" + q);
+		if(log.isTraceEnabled()) {
+			log.info("<< print()");
+		}
 	}
 
 	/**
@@ -181,6 +200,9 @@ public class Rational extends Zahl {
 	 * 
 	 */ 
 	public void kuerzen() {
+		if(log.isInfoEnabled()) {
+			log.info(">> kuerzen()");
+		}
 		// Vorzeichen merken und Betrag bilden
 		int sign = 1;
 		if (p < 0) {
@@ -197,6 +219,10 @@ public class Rational extends Zahl {
 		// Vorzeichen restaurieren
 		p = sign * p / teiler;
 		q = q / teiler;
+		
+		if(log.isInfoEnabled()) {
+			log.info("<< kuerzen()");
+		}
 
 	}
 
@@ -215,10 +241,16 @@ public class Rational extends Zahl {
 	 *\return GGT als integer.
 	 */ 
 	private int ggt(int x, int y) {
+		if(log.isDebugEnabled()) {
+			log.debug(">> ggt: x=" + x +", y="+ y);
+		}
 		while (y > 0) {
 			int rest = x % y;
 			x = y;
 			y = rest;
+		}
+		if(log.isDebugEnabled()) {
+			log.debug("<< ggt, return " + x);
 		}
 		return x;
 	}
