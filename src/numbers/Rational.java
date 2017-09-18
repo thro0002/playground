@@ -1,7 +1,5 @@
 package numbers;
 
-import java.util.Scanner;
-
 public class Rational extends Zahl {
 
 	private int p;
@@ -156,25 +154,6 @@ public class Rational extends Zahl {
 
 		a.mul(b);
 		return a;
-
-	}
-
-	public void eingabe() {
-		Scanner sc = new Scanner(System.in);
-
-		System.out.println("Geben Sie den Zähler ein:");
-		int i = sc.nextInt();
-		p = i;
-
-		System.out.println("Geben Sie den Nenner ein:");
-		i = sc.nextInt();
-		q = i;
-
-		sc.close();
-
-		System.out.println("Ihre Eingabe:");
-		kuerzen();
-		print();
 
 	}
 
