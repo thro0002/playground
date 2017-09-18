@@ -8,7 +8,7 @@
        </PatternLayout>
     </Console>
     <File name="logFile" fileName="log/rational.log"
-                        append="true">
+                        append="false">
       <PatternLayout>
          <Pattern>%d{dd.MM.YYYY HH:mm} %-5level %logger{36} - %msg%n</Pattern>
       </PatternLayout>

@@ -306,7 +306,7 @@ public class Rational extends Zahl {
 	/**
 	 * \mainpage Rationale Zahlen - Klassen
 	 * 
-	 * \image html bruch.jpg "Das Projekt-Logo"
+	 * \image html bruch.jpg "Rationale Zahlen"
 	 * 
 	 * Dies ist die Hauptseite der mit Doxygen erzeugten HTML-Dokumentation.
 	 * 
