@@ -4,6 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+
+/**
+ * Klasse mit JUnit-Testszenarien..
+ *
+ * $Author: roth $ $Revision: #1 $ $Date: 2017/09/18 $
+ */
+
+
 public class RationalTest {
 
 	@Test

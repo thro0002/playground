@@ -2,6 +2,14 @@ package numbers;
 
 import java.util.Scanner;
 
+
+/**
+ * Anwendungsklasse mit Benutzereingabe und anschließender Ausgabe des gekürzten Bruchs.
+ *
+ * $Author: roth $ $Revision: #1 $ $Date: 2017/09/18 $
+ */
+
+
 public class NextApp {
 
 	public static void main(String[] args) {
@@ -29,6 +37,5 @@ public class NextApp {
 		Rational r = new Rational(p, q);
 		r.kuerzen();
 		r.print();
-		
 	}
 }

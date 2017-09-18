@@ -1,5 +1,12 @@
 package numbers;
 
+/**
+ * Rationale Zahlen.
+ * 
+ * Abstrakte Klasse mit zu implementierenden Methoden für die Grundrechenarten sowie der Ausgabe.
+ *
+ * $Author: roth $ $Revision: #1 $ $Date: 2017/09/18 $
+ */
 public abstract class Zahl {
 	
 	
