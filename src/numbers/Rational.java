@@ -183,7 +183,7 @@ public class Rational extends Zahl {
 	}
 	
 	public void branch2() {
-		System.out.println("hoffentlich branch 2");
+		System.out.println("hoffentlich branch 21");
 	}
 
 }
