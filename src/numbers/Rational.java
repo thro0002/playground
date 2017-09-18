@@ -177,5 +177,9 @@ public class Rational extends Zahl {
 		print();
 
 	}
+	
+	public void branch1() {
+		System.out.println("hoffentlich branch 1");
+	}
 
 }
